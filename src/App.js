@@ -3,9 +3,9 @@ import Essentials from "./Pages/essentials";
 function App() {
   return (
     <>
-    {/* <div className="container mx-auto"> */}
+    <div className="bg-zinc-300	py-5 ">
       <Essentials />
-    {/* </div> */}
+    </div>
     </>
   );
 }

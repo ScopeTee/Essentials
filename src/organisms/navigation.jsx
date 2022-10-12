@@ -5,18 +5,22 @@ export default function Navigation() {
     return (
       <>
       <div className="flex justify-between items-center	">
-        <h3>FEW</h3>
-        {/* <ul className="flex">
-            <li><a href="#"> All </a></li>
-            <li><a href="#"> Home </a></li>
-            <li><a href="#"> Kitchen </a></li>
-            <li><a href="#"> Work </a></li>
-            <li><a href="#"> Travel </a></li>
-            <li><a href="#"> Tech </a></li>
-            <li><a href="#"> Gift Guide </a></li>
-        </ul> */}
-        <div className="flex items-center">
-            <img src={search} alt="" />
+        <h3 className="font-bold">FEW</h3>
+        <div className="hidden sm:flex space-x-5 md:space-x-10">
+          <a href="#" className="hover:text-red-500	"> All </a>
+          <a href="#" className="hover:text-red-500	"> Home </a>
+          <a href="#" className="hover:text-red-500	"> Kitchen </a>
+          <a href="#" className="hover:text-red-500	"> Work </a>
+          <a href="#" className="hover:text-red-500	"> Travel </a>
+          <a href="#" className="hover:text-red-500	"> Tech </a>
+          <a href="#" className="hover:text-red-500	"> Gift Guide </a>
+        </div>
+        <a href="#">
+          <img src={search} alt="" className="hidden sm:flex" />
+        </a>
+
+        <div className="flex items-center sm:hidden">
+            {/* <img src={search} alt="" /> */}
             <img src={menu} alt="" className="w-6" />
         </div>
       </div>

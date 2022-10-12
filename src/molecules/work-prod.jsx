@@ -1,13 +1,13 @@
 import {Heading1} from "../atoms/typography"
 import { Btn } from "../atoms/buttons";
-import OtherProducts from "./hero-products";
+import Products from "./product-component";
 import {work} from "../organisms/data"
 
 
-export default function Work() {
+export default function Work(props) {
 
   const workProducts = work.map(prod => {
-    return <OtherProducts 
+    return <Products 
         key={prod.key}
         name={prod.name} 
         description={prod.description} 
@@ -18,12 +18,12 @@ export default function Work() {
     return (
       <>
       <div>
-            <div className="flex flex-col	items-center justify-between">
+            <div className="flex flex-col	items-center justify-between space-y-12 ">
               <Heading1 className="text-4xl">Work</Heading1>
-              <div className="grid gap-x-2 gap-y-2	text-center	 grid-cols-2 sm:grid-cols-3">
+              <div className="grid gap-x-2 gap-y-4	text-center	 grid-cols-2 sm:grid-cols-3">
                 {workProducts}
               </div>
-              <Btn className="border-2 border-black p-2 rounded-3xl	">See all Work</Btn>
+              <Btn className="border-2 border-black p-2 rounded-3xl" onClick={props.button}>See all Work</Btn>
             </div>
         </div>
 
